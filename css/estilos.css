@@ -1,0 +1,382 @@
+/* Se van a trabajar solo con selectores de clases para no tener problema de especificidad  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.header {
+    height: 100vh;
+}
+
+.container {
+    max-width: 1450px;
+}
+
+.logo {
+    width: 50%;
+}
+
+.contenedorLogo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+.linksNav {
+    margin-right: -20px;
+}
+
+.colorGris {
+    background-color: #353a40;
+}
+
+.navbar-dark .navbar-nav .colorVerde {
+    color: rgb(9, 130, 47);
+}
+
+.navbar {
+    height: 12%;
+    font-size: 1.4rem;
+}
+
+
+/* seccion del carrousel */
+.carrusel-img {
+    position: relative;
+}
+
+.carrusel-img::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #00000044, #000000e1, #00000059);
+    opacity: 0.6;
+}
+
+.degradado {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedorTextConf {
+
+    top: 35%;
+    width: 40%;
+    color: white;
+    margin-right: 3%;
+    text-align: right;
+    left: initial;
+    right: 5%;
+}
+
+
+.contenedorTextConf h1 {
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.contenedorTextConf p {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+.transparent-button {
+    border: 1px solid #f9f9f9;
+
+    background-color: transparent;
+}
+
+.transparent-button,
+.btn-success {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    width: 35%;
+
+}
+
+.transparent-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Sector de los oradores - Las cards*/
+
+section.container {
+    height: 80vh;
+}
+
+.sectionOradores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    padding: 2rem;
+}
+
+.tituloPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #212429;
+}
+
+.tituloPrincipal_texto {
+    font-size: 1rem;
+    font-weight: 350;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+}
+
+.tituloSub {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+ }
+
+.cards {
+    flex: 1;
+    max-width: 1300px;
+}
+
+.margen {
+    margin-bottom: 2rem;
+}
+
+.lugarYfecha {
+    flex: 1;
+}
+
+/* sesion conoce más */
+.columnaIzq {
+    background-image: url("../assets/img/honolulu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+}
+
+.columnaDer {
+    background-color: #353a40;
+    color: white;
+    height: 60vh;
+    padding: 25px;
+}
+
+.botonTransparente {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.carousel-item img {
+    max-height: 800px;
+}
+
+/* footer */
+
+.footer {
+    background: linear-gradient(to right, #1d3947, #1d4962, #1e5372);
+    height: 10vh;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .row {
+    align-items: center;
+}
+
+.wsp {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .header {
+        height: initial;
+    }
+
+    .headerNav {
+        background-color: rgb(56, 56, 56);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: initial;
+        padding: 1rem 1rem;
+
+    }
+
+    .contenedorLogo {
+        width: 70%;
+    }
+
+    .listaNav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+/* seccion del carrousel */
+
+    .carousel-caption {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .contenedorTextConf {
+        background: linear-gradient(to bottom, #00000091, #000000c5, #00000091);
+        position: relative;
+        left: initial;
+        right: initial;
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .contenedorTextConf h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .contenedorTextConf p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        font-weight: normal;
+    }
+
+    .transparent-button,
+    .btn-success {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    /* sesion conoce más */
+
+    .columnaIzq {
+        /* img que pesa menos */
+        background-image: url("../assets/img/beach.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 45vh;
+    }
+
+    .columnaDer {
+        height: 45vh;
+    }
+
+    /* Fin del conoce más */
+
+    /* sesion conviertete en un orador- form */
+
+    .sectionForm {
+        height: auto;
+    }
+
+    .sectionForm p {
+        text-align: center;
+    }
+
+    .form {
+        text-align: center;
+        width: 90%;
+    }
+
+    .nomApe {
+        flex-wrap: wrap;
+    }
+
+    .nomApe input {
+        width: 100%;
+        margin-bottom: 1rem;
+
+    }
+
+    .texto textarea {
+        margin-bottom: 1rem;
+    }
+
+    /* fin conviertete en un orador- form */
+
+    /* footer */
+
+    .footer {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .footer a {
+        margin: 0.5rem;
+        display: block;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* TODO: acomodar el resto de las pantallas */
+
+
+/* 
+@media screen and (max-width: 567px) {
+}
+
+@media screen and (min-width: 568px) and (max-width:767px) {
+}
+
+@media screen and (min-width: 768px) and (max-width:991px) {
+
+}  
+
+@media screen and (min-width: 992px) and (max-width:1199px) {
+   
+}
+
+@media screen and (min-width: 1200px) and (max-width:1399px) {
+    
+} */
