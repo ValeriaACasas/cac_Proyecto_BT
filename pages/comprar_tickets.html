@@ -5,53 +5,297 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto</title>
+    <title>Proyecto BT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-    <!--kit de fontawesome-->
-    <script src="https://kit.fontawesome.com/c538ed8188.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
-    <header class="header">
-        <div class="headerNav">
-            <div class="contenedorLogo">
-                <a href="../index.html">
-                    <img src="..//assets/img/codoacodo2.png" alt="Logo">
-                </a>
-                <h2>Conf. Bs.As.</h2>
-            </div>
-            <nav class="navegacion">
-                <ul class="listaNav">
-                    <li><a class="linkNav colorBlanco" href="../index.html#laConferencia">La Conferencia</a></li>
-                    <li><a class="linkNav" href="../index.html#losOradores">Los Oradores</a></li>
-                    <li><a class="linkNav" href="../index.html#lugarYfecha">Lugar y La Fecha</a></li>
-                    <li><a class="linkNav" href="../index.html#convierteteEnOrador">Conviertete en Orador</a></li>
-                    <li><a class="linkNav colorVerde" href="#">Comprar tickets</a></li>
-                </ul>
-            </nav>
-        </div>
-        <section>
-            <p class="tituloSub">Próximamente...</p>
-        </section>
-    </header>
 
-    <main>
+    <header class="header">
+
+        <nav class="navbar navbar-expand-lg navbar-dark colorGris">
+            <div class="container">
+                <a class="navbar-brand contenedorLogo" href="../index.html">
+                    <img src="../assets/img/codoacodo2.png" alt="Logo" class="d-inline-block align-text-top logo">
+                    Conf. Bs.As.
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse linksNav" id="navbarNav">
+                    <ul class="navbar-nav w-100 justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html#laConferencia">La
+                                Conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#losOradores">Los Oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#lugarYfecha">Lugar y La Fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#convierteteEnOrador">Conviertete en Orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link colorVerde" href="../pages/comprar_tickets.html">Comprar tickets</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main ">
+
+
+        <section class="container pt-section">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+
+                    <div class="row row-cols-1 row-cols-md-3 text-center">
+
+                        <div class="col">
+                            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                                <div class="card-header py-3 text-white bg-primary border-primary">
+                                    <h4 class="my-8 fw-normal">Estudiante</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>Tienen un descuento</p>
+                                    <h3 class="card-title pricing-card-title">80%</h3>
+                                    <small class="fw-light text-muted mt-3">Presentar documentación</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card mb-4 rounded-3 shadow-sm border-info">
+                                <div class="card-header py-3 text-white bg-info border-info">
+                                    <h4 class="my-8 fw-normal">Trainee</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>Tienen un descuento</p>
+                                    <h3 class="card-title pricing-card-title">50%</h3>
+                                    <small class="fw-light text-muted mt-3">* Presentar documentación</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card mb-4 rounded-3 shadow-sm border-warning">
+                                <div class="card-header py-3 text-white bg-warning border-warning">
+                                    <h4 class="my-0 fw-normal">Junior</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p>Tienen un descuento</p>
+                                    <h3 class="card-title pricing-card-title">15%</h3>
+                                    <small class="fw-light text-muted mt-3">Presentar documentación</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tituloPrincipal">
+                        <span>Venta </span>
+                        <h2 class="titulo-gral">Valor de ticket $200</h2>
+                    </div>
+                    <form action="">
+                        <div class="row gx-2">
+                            <div class="col-md mb-3">
+                                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre"
+                                    id="nombre" required>
+                                <div class="invalid-feedback" id="mensajeErrorNombre">
+                                    <p>Ingrese su nombre</p>
+                                </div>
+                            </div>
+                            <div class="col-md mb-3">
+                                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido"
+                                    id="apellido" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                    id="mail" required>
+                            </div>
+                        </div>
+                        <div class="row gx-2">
+                            <div class="col-md mb-3">
+                                <label for="cantidadTickets" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" placeholder="Cantidad" aria-label="Cantidad"
+                                    id="cantidadTickets" min="1" required>
+                            </div>
+                            <div class="col-md mb-3">
+                                <label for="categoriaSelect" class="form-label">Categoría</label>
+                                <select class="form-select" aria-label="Categoria" id="categoriaSelect">
+                                    <option value="" selected>-- Seleccione --</option>
+                                    <option value="0">Sin Categoria</option>
+                                    <option value="1">Estudiante</option>
+                                    <option value="2">Trainee</option>
+                                    <option value="3">Junior</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="alert alert-primary mt-2 mb-4" role="alert">Total a pagar: $<span id="totalPago"
+                                class="align-middle"></span></div>
+                        <div class="row gx-2">
+                            <div class="col-md mb-3">
+                                <button type="reset" class="w-100 btn btn-lg btn-success" id="btnBorrar">Borrar</button>
+                            </div>
+                            <div class="col-md mb-3">
+                                <button type="button" class="w-100 btn btn-lg btn-success"
+                                    id="btnResumen">Resumen</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container">
+            <h1>Formulario</h1>
+            <form>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu nombre.
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido" required>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu apellido.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input type="email" class="form-control" id="correo" name="correo" required>
+                    <div class="invalid-feedback">
+                        Por favor ingresa una dirección de correo válida.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+                    <div class="invalid-feedback">
+                        Por favor ingresa una cantidad válida.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <select class="form-control" id="categoria" name="categoria" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="trabajador">Trabajador</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor selecciona una categoría.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-secondary">Borrar</button>
+            </form>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="tituloPrincipal">
+                    <h2 class="tituloPrincipal_texto">CONVIERTETE EN UN</h2>
+                    <p class="tituloSub">ORADOR</p>
+                    <p>Anotate como orador para dar una <span class="subrayado">charla
+                            ignite</span>. Cuentanos de
+                        que
+                        quieres hablar!</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-12 col-lg-8">
+                        <form action="" autocomplete="on">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Nombre" required>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Apellido" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="Sobre que quieres hablar?" rows="6"
+                                    required></textarea>
+                                <p class="form-text">Recuerda incluir un titulo para tu
+                                    charla</p>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-success w-100">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <footer>
-        <div>
-            <a href="">link</a>
-            <a href="">link</a>
-            <a href="">link</a>
-            <a href="">link</a>
-            <a href="">link</a>
-            <a href="">link</a>
-            <a href="">link</a>
-
+    <footer class="footer container-fluid mt-5">
+        <div class="row text-center gap-3 w-75 h-100 mx-auto">
+            <a class="col-sm-12 col-md-2 linkFooter" href="">Preguntas Frecuentes</a>
+            <a class="col-sm-12 col-md-2 linkFooter" href="">Contactenos</a>
+            <a class="col-sm-12 col-md-1 linkFooter" href="">Prensa</a>
+            <a class="col-sm-12 col-md-2 linkFooter" href="">Conferencias</a>
+            <a class="col-sm-12 col-md-2 linkFooter" href="">Terminos y Condiciones</a>
+            <a class="col-sm-12 col-md-1 linkFooter" href="">Privacidad</a>
+            <a class="col-sm-12 col-md-1 linkFooter" href="">Estudiantes</a>
         </div>
+        <a href=""><img class="wsp" src="./assets/img/whatsapp.png" alt="what"></a>
     </footer>
+
+
+    <a href=""><img class="wsp" src="./assets/img/whatsapp.png" alt="what"></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
