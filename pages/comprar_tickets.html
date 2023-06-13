@@ -56,9 +56,7 @@
         <section class="container pt-section">
             <div class="row justify-content-center mt-3">
                 <div class="col-lg-8 col-xl-7">
-
                     <div class="row row-cols-1 row-cols-md-3 text-center">
-
                         <div class="col">
                             <div class="card mb-4 rounded-3 shadow-sm border-primary">
                                 <div class="card-header py-3 text-white bg-primary border-primary">
@@ -71,7 +69,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col">
                             <div class="card mb-4 rounded-3 shadow-sm border-info">
                                 <div class="card-header py-3 text-white bg-info border-info">
@@ -84,7 +81,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col">
                             <div class="card mb-4 rounded-3 shadow-sm border-warning">
                                 <div class="card-header py-3 text-white bg-warning border-warning">
@@ -97,30 +93,35 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="tituloPrincipal">
                         <span>Venta </span>
                         <h2 class="titulo-gral">Valor de ticket $200</h2>
                     </div>
-                    <form action="">
+                    <form class="needs-validation" novalidate>
                         <div class="row gx-2">
                             <div class="col-md mb-3">
                                 <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre"
                                     id="nombre" required>
-                                <div class="invalid-feedback" id="mensajeErrorNombre">
-                                    <p>Ingrese su nombre</p>
+                                <div class="invalid-feedback" id="errorNombre">
+                                    Por favor, ingrese su nombre.
                                 </div>
                             </div>
                             <div class="col-md mb-3">
                                 <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido"
                                     id="apellido" required>
+                                <div class="invalid-feedback" id="errorApe">
+                                    Por favor, ingrese su apellido.
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">
                                 <input type="email" class="form-control" placeholder="Email" aria-label="Email"
                                     id="mail" required>
+                                <div class="invalid-feedback" id="errorMail">
+                                    Por favor, ingrese un correo electrónico válido.
+                                </div>
                             </div>
                         </div>
                         <div class="row gx-2">
@@ -128,20 +129,26 @@
                                 <label for="cantidadTickets" class="form-label">Cantidad</label>
                                 <input type="number" class="form-control" placeholder="Cantidad" aria-label="Cantidad"
                                     id="cantidadTickets" min="1" required>
+                                <div class="invalid-feedback" id="errorCantidad">
+                                    Por favor, ingrese una cantidad válida.
+                                </div>
                             </div>
                             <div class="col-md mb-3">
                                 <label for="categoriaSelect" class="form-label">Categoría</label>
-                                <select class="form-select" aria-label="Categoria" id="categoriaSelect">
+                                <select class="form-select" aria-label="Categoria" id="categoriaSelect" required>
                                     <option value="" selected>-- Seleccione --</option>
-                                    <option value="0">Sin Categoria</option>
+                                    <option value="0">Sin Categoría</option>
                                     <option value="1">Estudiante</option>
                                     <option value="2">Trainee</option>
                                     <option value="3">Junior</option>
                                 </select>
+                                <div class="invalid-feedback" id="errorCate">
+                                    Por favor, seleccione una categoría.
+                                </div>
                             </div>
                         </div>
-                        <div class="alert alert-primary mt-2 mb-4" role="alert">Total a pagar: $<span id="totalPago"
-                                class="align-middle"></span></div>
+                        <div class="alert alert-primary mt-2 mb-4" role="alert" id="total">Total a pagar: $<span
+                                id="totalPago" class="align-middle"></span></div>
                         <div class="row gx-2">
                             <div class="col-md mb-3">
                                 <button type="reset" class="w-100 btn btn-lg btn-success" id="btnBorrar">Borrar</button>
@@ -152,10 +159,10 @@
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </section>
+
 
     </main>
 
@@ -173,12 +180,14 @@
     </footer>
 
 
-    <a href=""><img class="wsp" src="./assets/img/whatsapp.png" alt="what"></a>
+    <a href=""><img class="wsp" src="../assets/img/whatsapp.png" alt="what"></a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
+    <script src="../js/comprar_tickets.js"></script>
+    
 </body>
 
 </html>
