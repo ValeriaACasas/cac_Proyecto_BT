@@ -98,5 +98,32 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("totalPago").innerText = "";
         });
     }
+
+
+    const categorias = {
+        "estudianteDiv": 1,
+        "traineeDiv": 2,
+        "juniorDiv": 3
+    };
+
+    const estudianteDiv = document.getElementById("estudianteDiv");
+    const traineeDiv = document.getElementById("traineeDiv");
+    const juniorDiv = document.getElementById("juniorDiv");
+
+    estudianteDiv.addEventListener("click", function () {
+        const categoriaSelect = document.getElementById("categoriaSelect");
+        categoriaSelect.value = categorias["estudianteDiv"];
+    });
+
+    traineeDiv.addEventListener("click", function () {
+        const categoriaSelect = document.getElementById("categoriaSelect");
+        categoriaSelect.value = categorias["traineeDiv"];
+    });
+
+    juniorDiv.addEventListener("click", function () {
+        const categoriaSelect = document.getElementById("categoriaSelect");
+        categoriaSelect.value = categorias["juniorDiv"];
+    });
+
 });
 
